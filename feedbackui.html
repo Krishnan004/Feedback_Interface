@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+
+            background-image: url("https://elearningindustry.com/wp-content/uploads/2015/12/7-tips-to-create-an-effective-constructive-feedback-system-for-elearning-e1450787065811.jpg");
+
+        }
+
+        form {
+            background: rgba(255, 0, 0, 0.3);
+            text-align: center;
+            padding: 50px;
+            margin: 5%;
+            margin-right: 28%;
+            margin-left: 28%;
+            margin-top: 0%;
+            border-radius: 20%;
+        }
+
+        #name,
+        #email {
+            margin: 3%;
+            margin-right: 14%;
+            border-color: ;
+        }
+
+        #name {
+            margin-left: 6%;
+        }
+
+        #dob {
+            margin: 3%;
+            margin-right: 24%;
+            margin-left: 7%;
+        }
+
+        #feedback {
+            padding: 5%;
+            margin-top: 0%;
+            text-align-last: auto;
+        }
+
+        #submit {
+            padding: 3%;
+            margin: 5%;
+            margin-left: 10%;
+            background-color: lightsalmon;
+            border-radius: 10px;
+            border: lightsalmon;
+                     }
+
+        #choice {
+            margin-top: 3%;
+            margin-right: 18%;
+            margin-left: 4%;
+        }
+
+        #choice1 {
+            margin-bottom: 3%;
+            margin-right: 18%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+
+<body id="body">
+    <h1 style="text-align:center;font-style:italic">Feedback Form</h1>
+    <form id="feedbackForm" action="submit-feedback.html">
+        Email id:
+        <input type="email" id="email" placeholder="Enter your Email"><br>
+        Name:
+        <input type="text" id="name" placeholder="Enter your name"><br>
+        DOB:
+        <input type="date" id="dob"><br>
+        Male<input type="radio" name="gender" id="choice"> <br>
+        Female<input type="radio" name="gender" id="choice1"><br>
+        <p style="margin-right:52%;margin-top:0%;margin-bottom: 0%">Feedback:</p><br>
+        <input type="text" placeholder="Write minimum 10 charector" name="" id="feedback"><br>
+        <input type="submit" value="Submit" id="submit">
+        
+    </form>
+
+    <script>
+
+
+        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var name = document.getElementById("name").value;
+            var nameRegas = /^[a-z\d]+$/i;
+            var male =document.getElementById('choice');
+            var female=document.getElementById('choice1');
+
+          if (emailRegex.test(email) && nameRegas.test(name) && (male.checked || female.checked)&& !(dob.value.length<1)&&(feedback.value.length>10)) {
+                window.location.href = 'exit.html';
+            }
+            else {
+                // If email is not valid, refresh the page
+                alert("Enter the valid Details");
+            }
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

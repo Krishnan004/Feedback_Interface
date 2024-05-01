@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body
+        {
+            background-image: url("https://elearningindustry.com/wp-content/uploads/2015/12/7-tips-to-create-an-effective-constructive-feedback-system-for-elearning-e1450787065811.jpg");
+            
+            text-align: center
+        }
+        form{
+            text-align: center;
+            background-color:  rgba(255, 0, 0, 0.3);
+            margin-left: 33%;
+            margin-top: 10%;
+            height: 250px;
+            width: 500px;
+            border-color:black; 
+            border-radius: 10%;
+        }
+        #back{
+            padding: 2%;
+            margin-top: 25%;
+            background-color: lightsalmon;
+            border-radius: 10px;
+            border: lightsalmon;
+                            
+            }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="form">
+        
+    <h1>Thank you for your feedback</h1><br>
+    <input type="button" value="back" id="back">
+</form>
+<script>
+    document.getElementById("back").addEventListener('click',function(event){
+event.preventDefault();
+
+window.location.href="feedbackui.html";
+    });
+</script>
+</body>
+</html>
